@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MURAS</title>
+
+<link
+
+rel="stylesheet"
+
+href="{{ url_for('static', filename='style.css') }}"
+
+>
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+
+MURAS
+
+</div>
+
+<a href="#contact" class="nav-btn">
+
+Записаться
+
+</a>
+
+</nav>
+
+<section class="hero">
+
+<img
+
+src="{{ url_for('static', filename='images/hero-1.jpg') }}"
+
+class="hero-image"
+
+>
+
+<div class="hero-overlay"></div>
+
+<div class="hero-light"></div>
+
+<div class="hero-content">
+
+<h1>
+
+Эстетическая стоматология<br>
+
+нового поколения
+
+</h1>
+
+<p>
+
+Полный спектр стоматологических услуг:
+
+от профессиональной чистки
+
+до имплантации и ортодонтии.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#prices" class="hero-btn gold">
+
+Прайс-лист
+
+</a>
+
+<a href="#contact" class="hero-btn dark">
+
+Контакты
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+
+Наша команда
+
+</h2>
+
+<div class="luxury-grid">
+
+{% for i in range(1,18) %}
+
+<div class="luxury-card">
+
+<img
+
+src="{{ url_for('static', filename='images/staff-' ~ i ~ '.jpg') }}"
+
+>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+
+Работа с пациентами
+
+</h2>
+
+<div class="luxury-grid">
+
+{% for i in range(1,7) %}
+
+<div class="luxury-card">
+
+<img
+
+src="{{ url_for('static', filename='images/client-' ~ i ~ '.jpg') }}"
+
+>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+
+Атмосфера клиники
+
+</h2>
+
+<div class="luxury-grid">
+
+{% for i in range(1,9) %}
+
+<div class="luxury-card">
+
+<img
+
+src="{{ url_for('static', filename='images/office-' ~ i ~ '.jpg') }}"
+
+>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</section>
+
+<section id="prices" class="section">
+
+<h2 class="section-title">
+
+Все виды стоматологических услуг
+
+</h2>
+
+<p
+
+style="
+
+max-width:900px;
+
+margin:auto;
+
+text-align:center;
+
+opacity:0.7;
+
+font-size:20px;
+
+line-height:1.8;
+
+margin-bottom:70px;
+
+"
+
+>
+
+От профессиональной чистки
+
+и лечения кариеса
+
+до имплантации, ортодонтии,
+
+брекетов, элайнеров,
+
+виниров и коронок.
+
+</p>
+
+<div
+
+style="
+
+text-align:center;
+
+opacity:0.5;
+
+margin-bottom:40px;
+
+font-size:15px;
+
+"
+
+>
+
+* Информация носит ознакомительный характер
+
+</div>
+
+<div class="price-grid">
+
+<div class="price-card">
+
+<h3>
+
+Имплантация под ключ
+
+</h3>
+
+<p>
+
+Современная имплантация
+
+премиального уровня.
+
+</p>
+
+<div class="price">
+
+от 45 000 ₽
+
+</div>
+
+</div>
+
+<div class="price-card">
+
+<h3>
+
+Лечение кариеса
+
+</h3>
+
+<p>
+
+Эстетическое лечение
+
+с современными технологиями.
+
+</p>
+
+<div class="price">
+
+4 500 ₽
+
+</div>
+
+</div>
+
+<div class="price-card">
+
+<h3>
+
+Профессиональная чистка
+
+</h3>
+
+<p>
+
+Комплексная гигиена
+
+и забота о здоровье зубов.
+
+</p>
+
+<div class="price">
+
+4 500 ₽
+
+</div>
+
+</div>
+
+<div class="price-card">
+
+<h3>
+
+Лечение под микроскопом
+
+</h3>
+
+<p>
+
+Высокоточная стоматология
+
+для сложных случаев.
+
+</p>
+
+<div class="price">
+
+от 7 500 ₽
+
+</div>
+
+</div>
+
+<div class="price-card">
+
+<h3>
+
+Ортодонтия
+
+</h3>
+
+<p>
+
+Брекеты, элайнеры
+
+и исправление прикуса.
+
+</p>
+
+<div class="price">
+
+индивидуально
+
+</div>
+
+</div>
+
+<div class="price-card">
+
+<h3>
+
+Виниры и коронки
+
+</h3>
+
+<p>
+
+Эстетическая реставрация
+
+улыбки премиального уровня.
+
+</p>
+
+<div class="price">
+
+индивидуально
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact-section">
+
+<h2 class="section-title">
+
+Контакты и запись
+
+</h2>
+
+<div class="contact-info">
+
+<div class="info-card">
+
+<h3>
+
+Адрес
+
+</h3>
+
+<p>
+
+Богдана Хмельницкого 268
+
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+
+Телефон
+
+</h3>
+
+<p>
+
++7 (383) 255-55-03
+
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+
+WhatsApp
+
+</h3>
+
+<p>
+
++7 962 835-55-03
+
+</p>
+
+</div>
+
+</div>
+
+<form
+
+class="contact-form"
+
+onsubmit="sendToWhatsApp(event)"
+
+>
+
+<input
+
+type="text"
+
+id="name"
+
+placeholder="Ваше имя"
+
+required
+
+>
+
+<input
+
+type="tel"
+
+id="phone"
+
+placeholder="Ваш телефон"
+
+required
+
+>
+
+<textarea
+
+id="message"
+
+placeholder="Комментарий"
+
+></textarea>
+
+<button type="submit">
+
+Записаться в WhatsApp
+
+</button>
+
+</form>
+
+</section>
+
+<footer class="footer">
+
+© MURAS — Premium Dentistry
+
+</footer>
+
+<script>
+
+function sendToWhatsApp(event){
+
+event.preventDefault();
+
+const name =
+
+document.getElementById("name").value;
+
+const phone =
+
+document.getElementById("phone").value;
+
+const message =
+
+document.getElementById("message").value;
+
+const whatsappNumber =
+
+"79628355503";
+
+const text =
+
+"Новая заявка!\n\n" +
+
+"Имя: " + name + "\n" +
+
+"Телефон: " + phone + "\n" +
+
+"Комментарий: " + message;
+
+const url =
+
+"https://api.whatsapp.com/send?phone=" +
+
+whatsappNumber +
+
+"&text=" +
+
+encodeURIComponent(text);
+
+window.location.href = url;
+
+}
+
+</script>
+
+</body>
+
+</html>
